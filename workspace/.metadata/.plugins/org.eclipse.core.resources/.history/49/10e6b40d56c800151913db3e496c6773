@@ -1,0 +1,49 @@
+package org.usfirst.frc.team1025.robot.subsystems;
+
+import com.ni.vision.NIVision;
+import com.ni.vision.NIVision.Image;
+import com.ni.vision.NIVision.ImageType;
+
+import edu.wpi.first.wpilibj.CameraServer;
+import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.vision.USBCamera;
+
+/**
+ *
+ */
+public class CameraSubsystem extends Subsystem {
+	
+	CameraServer server;
+    Image currentFrame=null;
+    
+	USBCamera targetingCamera=null;
+	
+    // Put methods for controlling this subsystem
+    // here. Call these from Commands.
+	
+	public CameraSubsystem() {
+	 server = CameraServer.getInstance();
+     //server.setQuality(50);
+     //the camera name (ex "cam0") can be found through the roborio web interface
+     //server.startAutomaticCapture("cam0");
+     //targetingCamera= new USBCamera();
+     currentFrame=NIVision.imaqCreateImage(ImageType.IMAGE_RGB, 0);
+	}
+	
+	public void GetImage(){
+		
+	}
+
+    public void initDefaultCommand() {
+        // Set the default command for a subsystem here.
+        //setDefaultCommand(new MySpecialCommand());
+    }
+    
+    public void updateStatus() {
+    	
+        this.targetingCamera.getImage(currentFrame);
+        //server.setImage(currentFrame);
+    }
+    
+}
+
