@@ -1,3 +1,5 @@
+
+
 package org.usfirst.frc.team1025.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
@@ -14,6 +16,8 @@ public class XboxController extends Joystick {
     public Button buttonSelect;
     public Button buttonStart;
     public Button buttonLeftStick;
+    
+    
     public Button buttonRightStick;
     
     public XboxController(int port) {
@@ -34,31 +38,31 @@ public class XboxController extends Joystick {
     
       
    
-    public double getLeftX() {
+    public double getLeftX() { //good
         return getRawAxis(0);
     }
     
-    public double getLeftY() {
+    public double getLeftY() { //good
         return getRawAxis(1);
     }
     
 
-    public double getRightX() {
+    public double getRightX() { //good
         return getRawAxis(4);
     }
     
-    public double getRightY() {
+    public double getRightY() { //good 
         return getRawAxis(5);
     }
     
-    public double getDpadX() {
-        return getRawAxis(6);
+    public int getDpad() { //good
+        return getPOV();  // THIS RETURNS AN ANGLE, IS -1 WHEN NOT PRESSED
     }
     
-    public double getTriggerL() {
-        return getRawAxis(2);
+    public double getTriggerL() { //good //WAS 3, CHANGED TO 4 1/30/16, FIX
+        return getRawAxis(4);
     }
-    public double getTriggerR() {
+    public double getTriggerR() { //good 
     	return getRawAxis(3);
     }
     

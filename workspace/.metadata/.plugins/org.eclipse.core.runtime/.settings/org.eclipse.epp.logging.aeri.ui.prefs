@@ -1,3 +1,4 @@
 action=IGNORE
+configured=true
 eclipse.preferences.version=1
-rememberSendAction=RESTART
+rememberSendAction=NONE

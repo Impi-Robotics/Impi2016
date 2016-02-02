@@ -1,4 +1,9 @@
 eclipse.preferences.version=1
+org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/Program Files/Java/jre1.8.0_66/lib/rt.jar
+org.eclipse.jdt.core.classpathVariable.JRE_SRC=
+org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
+org.eclipse.jdt.core.classpathVariable.JUNIT_HOME=C\:/Users/IBM_ADMIN/.p2/pool/plugins/org.junit_4.12.0.v201504281640/
+org.eclipse.jdt.core.classpathVariable.M2_REPO=C\:/Users/IBM_ADMIN/.m2/repository
 org.eclipse.jdt.core.classpathVariable.networktables=C\:/Users/impi/wpilib/java/current/lib/NetworkTables.jar
 org.eclipse.jdt.core.classpathVariable.networktables.sources=C\:/Users/impi/wpilib/java/current/lib/NetworkTables-sources.jar
 org.eclipse.jdt.core.classpathVariable.wpilib=C\:/Users/impi/wpilib/java/current/lib/WPILib.jar
