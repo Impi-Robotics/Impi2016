@@ -1,4 +1,3 @@
-action=IGNORE
-configured=true
+action=ASK
 eclipse.preferences.version=1
 rememberSendAction=NONE

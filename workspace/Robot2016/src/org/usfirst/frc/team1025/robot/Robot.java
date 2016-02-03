@@ -1,51 +1,51 @@
 package org.usfirst.frc.team1025.robot;
 
-
-import org.usfirst.frc.team1025.robot.commands.PID_BasketArmUp;
+//import org.usfirst.frc.team1025.robot.commands.Autonomous.*;
 import org.usfirst.frc.team1025.robot.subsystems.*;
 
-import com.ni.vision.NIVision;
-import com.ni.vision.NIVision.GetImageSizeResult;
-import com.ni.vision.NIVision.Image;
-import com.ni.vision.NIVision.ImageType;
-
-import edu.wpi.first.wpilibj.CameraServer;
-import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 //import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj.vision.USBCamera;
 
 public class Robot extends IterativeRobot {
 
-
-	
-    public static CameraSubsystem cameraSubsystem;
-	public static ChassisSubsystem chassisSubsystem;
-	public static AnalogSubsystem analogSubsystem;
-    public static OI oi;
+	public static OI oi;
+   
+	public static BasketArmSubsystem basketarmSubsystem = new BasketArmSubsystem();
+	public static BasketRollerSubsystem basketrollerSubsystem = new BasketRollerSubsystem();
+    public static BigArmSubsystem bigarmSubsystem = new BigArmSubsystem();
+	public static CameraSubsystem cameraSubsystem = new CameraSubsystem();
+    public static CatapultReturnSubsystem catapultreturnSubsystem = new CatapultReturnSubsystem();
+	public static ChassisSubsystem chassisSubsystem = new ChassisSubsystem();
+    public static ClimberArmSubsystem climberarmSubsystem = new ClimberArmSubsystem();
+    public static ClimberWinchSubsystem climberwinchSubsystem = new ClimberWinchSubsystem();
+    
     private Command autonomousCommand;
 	public SendableChooser autoChooser;
 	public SendableChooser autonomousDirectionChooser;
-	public static boolean isBasketArmUpCommandRunning = false;
-	public static boolean isBasketArmDownCommandRunning = false;
 
 
     public void robotInit() {
         cameraSubsystem = new CameraSubsystem();
         chassisSubsystem = new ChassisSubsystem();
-        analogSubsystem = new AnalogSubsystem();
+        basketarmSubsystem = new BasketArmSubsystem();
+        basketrollerSubsystem = new BasketRollerSubsystem();
+        bigarmSubsystem = new BigArmSubsystem();
+        catapultreturnSubsystem = new CatapultReturnSubsystem();
+        climberarmSubsystem = new ClimberArmSubsystem();
+        climberwinchSubsystem = new ClimberWinchSubsystem();
        
         oi = new OI();
 
 		autoChooser = new SendableChooser();
+		
+
+        
         chassisSubsystem.stop();
-      
+       
        
     }
 	
@@ -59,7 +59,6 @@ public class Robot extends IterativeRobot {
     }
 
     public void autonomousPeriodic() {
-    	
         Scheduler.getInstance().run();
         updateStatus();
     }
@@ -78,8 +77,6 @@ public class Robot extends IterativeRobot {
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
         updateStatus();
-        cameraSubsystem.GetImage();
-        //
     }
 
     public void testPeriodic() {
@@ -89,19 +86,16 @@ public class Robot extends IterativeRobot {
     public void updateStatus() {
         //SmartDashboard.putNumber("Num Totes in Robot",  numTotesInRobot);
 
-    	//Testing Section
-    	SmartDashboard.putBoolean("Down Running?", isBasketArmDownCommandRunning);
-    	SmartDashboard.putBoolean("Up Running?", isBasketArmUpCommandRunning);
-    	SmartDashboard.putNumber("IS GT 0?",Math.abs(Robot.analogSubsystem.getSetpoint()) - Robot.analogSubsystem.getPosition());
-    	//SmartDashboard.putNumber("Dpad Direction", oi.driverController.getDpad());
-    	//Not-Testing Section
+        cameraSubsystem.updateStatus();
         chassisSubsystem.updateStatus();
-        analogSubsystem.updateStatus();
-        //cameraSubsystem.updateStatus();
+        basketarmSubsystem.updateStatus();
+        basketrollerSubsystem.updateStatus();
+        bigarmSubsystem.updateStatus();
+        catapultreturnSubsystem.updateStatus();
+        climberarmSubsystem.updateStatus();
+        climberwinchSubsystem.updateStatus();
     
     }
-    
-   
     
    
 }

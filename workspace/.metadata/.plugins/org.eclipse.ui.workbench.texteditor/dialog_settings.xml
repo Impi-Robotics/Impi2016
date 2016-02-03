@@ -2,13 +2,19 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="cameraSubsystem" key="selection"/>
+		<item value="Polar" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="cameraSubsystem"/>
+			<item value="polar"/>
+			<item value="halo"/>
+			<item value="button"/>
+			<item value="updateStatus"/>
+			<item value="updateStatus()"/>
+			<item value="requires(chassisSubsystem);"/>
+			<item value="Halo"/>
 		</list>
 		<list key="replacehistory">
 		</list>
