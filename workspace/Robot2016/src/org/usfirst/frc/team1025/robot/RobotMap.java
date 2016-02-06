@@ -10,6 +10,8 @@ public class RobotMap {
 	        public static final int PORT__OI__DRIVER_CONTROLLER = 0;
 	       	public static final int PORT__OI__BUTTONS_CONTROLLER = 1;
 	
+	//PWM Channel Assignments
+	       	
 			public static final int PWM__CHASSIS__RIGHT_FRONT_MOTOR = 3;
     		public static final int PWM__CHASSIS__LEFT_FRONT_MOTOR = 0;
     		public static final int PWM__CHASSIS__RIGHT_REAR_MOTOR = 2;
@@ -25,7 +27,9 @@ public class RobotMap {
 	        public static final int PWM__CLIMBER_MOTOR = 9;
 	
 	
-    //PCM Module and Channel Assignments
+    //CAN Bus Assignments
+	        
+	        public static final int CAN__CATAPULT_MOTOR = 0;
           
 	
 	//Digital IO
@@ -35,11 +39,13 @@ public class RobotMap {
 			public static final int DIO__CHASSIS__LEFT_ENCODER_B = 6;
 			
 			public static final int DIO__CATAPULT_LIMIT_SWITCH = 4;
-			public static final int DIO__CATAPULT_MOTOR = 9;
+			
 			
 	//Analog
 			public static final int ANALOG_BASKET_POT = 0;
 			public static final int ANALOG_BIGARM_POT = 1;
+			
+			
 
 
 

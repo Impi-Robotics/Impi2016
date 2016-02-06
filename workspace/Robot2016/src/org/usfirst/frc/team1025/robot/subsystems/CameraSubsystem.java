@@ -15,6 +15,7 @@ public class CameraSubsystem extends Subsystem {
     // here. Call these from Commands.
 	
 	public CameraSubsystem() {
+		
 	 server = CameraServer.getInstance();
      server.setQuality(50);
      //the camera name (ex "cam0") can be found through the roborio web interface

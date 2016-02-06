@@ -42,4 +42,6 @@
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.SpeedController"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team1025.robot.commands.BigArm.SetBigArmSetpoint"/>
 <fullyQualifiedTypeName name="org.usfirst.frc.team1025.robot.commands.BasketArm.SetBasketArmSetpoint"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team1025.robot.commands.Chassis.Chassis_DriveDistanceDumb"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.CANTalon"/>
 </qualifiedTypeNameHistroy>

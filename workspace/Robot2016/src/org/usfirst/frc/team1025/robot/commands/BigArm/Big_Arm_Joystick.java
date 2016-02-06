@@ -30,13 +30,15 @@ public class Big_Arm_Joystick extends Command {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
+    	
         return false;
+        
     }
 
     // Called once after isFinished returns true
     protected void end() {
     	
-    	Robot.bigarmSubsystem.getPIDController().disable();
+
     	    
     }
 
@@ -44,7 +46,7 @@ public class Big_Arm_Joystick extends Command {
     // subsystems is scheduled to run
     protected void interrupted() {
     	
-    	Robot.bigarmSubsystem.getPIDController().disable();
+ 
     	
     }
 }

@@ -30,23 +30,29 @@ public class Basket_Roller_Joystick_In extends Command {
    	 
         double Speed = ImpiLib.signedSquare(ImpiLib.deadzone(buttonsController.getTriggerL(),BUTTONS_JOYSTICK_DEADZONE));
         
-        Robot.basketrollerSubsystem.BasketRollerDrive(-Speed);
+        Robot.basketrollerSubsystem.basketRollerDrive(-Speed);
     	
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
+    	
         return false;
     }
+    
 
     // Called once after isFinished returns true
     protected void end() {
-    	Robot.basketrollerSubsystem.BasketRollerDrive(0.0);
+    	
+    	Robot.basketrollerSubsystem.basketRollerDrive(0.0);
+    	
     }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
-    	Robot.basketrollerSubsystem.BasketRollerDrive(0.0);
+    	
+    	Robot.basketrollerSubsystem.basketRollerDrive(0.0);
+    	
     }
 }

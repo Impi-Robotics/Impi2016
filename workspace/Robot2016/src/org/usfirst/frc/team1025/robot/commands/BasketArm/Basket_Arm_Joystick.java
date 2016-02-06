@@ -16,6 +16,7 @@ public class Basket_Arm_Joystick extends Command {
     public Basket_Arm_Joystick() {
         // Use requires() here to declare subsystem dependencies
         requires(Robot.basketarmSubsystem);
+    
     }
 
     // Called just before this Command runs the first time
@@ -34,13 +35,15 @@ public class Basket_Arm_Joystick extends Command {
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
+    	
         return false;
+        
     }
 
     // Called once after isFinished returns true
     protected void end() {
     	
-       	Robot.basketarmSubsystem.getPIDController().disable();
+
     	
     
     }
@@ -48,8 +51,6 @@ public class Basket_Arm_Joystick extends Command {
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() {
-    	
-       	Robot.basketarmSubsystem.getPIDController().disable();
     	
     }
 }

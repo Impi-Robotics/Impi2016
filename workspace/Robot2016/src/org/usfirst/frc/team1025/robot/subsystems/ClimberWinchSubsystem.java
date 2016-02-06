@@ -25,16 +25,15 @@ public class ClimberWinchSubsystem extends Subsystem {
         
 	}
     public void initDefaultCommand() {
+    	
     	setDefaultCommand(new Climber_Winch_Joystick());
-        // Set the default command for a subsystem here.
-        //setDefaultCommand(new MySpecialCommand());
+    
     }
     
     public void updateStatus() {
-   	// SmartDashboard.putNumber("Catapult Limit Switch", isSwitchSet());
-   	// SmartDashboard.putNumber("Chassis Right Encoder", getRightEncoderDistance());
-   }
     
+    }
+    	
     public void climberDrive(double leftSpeed, double rightSpeed) {
         double leftPower = ImpiLib.clamp(leftSpeed, -1.0, 1.0);
         double rightPower = -ImpiLib.clamp(rightSpeed, -1.0, 1.0);
@@ -45,6 +44,7 @@ public class ClimberWinchSubsystem extends Subsystem {
     
     
     public void stop() {
+    	
         climberLeftMotor.set(0.);
         climberRightMotor.set(0.);	
 	}
