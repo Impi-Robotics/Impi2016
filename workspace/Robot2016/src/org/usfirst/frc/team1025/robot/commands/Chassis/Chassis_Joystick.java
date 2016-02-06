@@ -19,15 +19,14 @@ public class Chassis_Joystick extends Command {
     
     protected void execute() {
     	 	 
-    	
       XboxController driverController = Robot.oi.getDriverController();
  
-            double leftSpeed = ImpiLib.signedSquare(ImpiLib.deadzone(driverController.getLeftY(),DRIVER_JOYSTICK_DEADZONE));
-            double rightSpeed = ImpiLib.signedSquare(ImpiLib.deadzone(driverController.getRightY(),DRIVER_JOYSTICK_DEADZONE));
+            double straightAxis = ImpiLib.signedSquare(ImpiLib.deadzone(driverController.getLeftY(),DRIVER_JOYSTICK_DEADZONE));
+            double turnAxis = ImpiLib.signedSquare(ImpiLib.deadzone(driverController.getRightX(),DRIVER_JOYSTICK_DEADZONE));
+            
          
-            Robot.chassisSubsystem.simpleDrive(leftSpeed,rightSpeed);
+            Robot.chassisSubsystem.haloDrive(straightAxis,turnAxis);
         
-       
        
     }
 
