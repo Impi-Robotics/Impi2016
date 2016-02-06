@@ -14,6 +14,7 @@ public class Climber_Winch_Joystick extends Command {
     public Climber_Winch_Joystick() {
       
     	requires(Robot.climberwinchSubsystem);
+    	setInterruptible(true);
     }
 
     // Called just before this Command runs the first time
@@ -26,9 +27,17 @@ public class Climber_Winch_Joystick extends Command {
     	
     	XboxController driverController = Robot.oi.getDriverController();
     	
-       	if (driverController.getRawButton(5) && (driverController.getRawButton(6)))
-    	{Robot.climberwinchSubsystem.climberDrive(1.0,1.0);}
-    	else {Robot.climberwinchSubsystem.climberDrive(0.,0.);}
+       	if (driverController.getRawButton(5) && (driverController.getRawButton(6))){
+       		
+       		Robot.climberwinchSubsystem.climberDrive(1.0,1.0);
+       		
+       	}
+    	
+       	else {
+       		
+       		Robot.climberwinchSubsystem.climberDrive(0.,0.);
+       	
+       	}
 
     }
 

@@ -14,14 +14,14 @@ public class Robot extends IterativeRobot {
 
 	public static OI oi;
    
-	public static BasketArmSubsystem basketarmSubsystem = new BasketArmSubsystem();
-	public static BasketRollerSubsystem basketrollerSubsystem = new BasketRollerSubsystem();
-    public static BigArmSubsystem bigarmSubsystem = new BigArmSubsystem();
-	public static CameraSubsystem cameraSubsystem = new CameraSubsystem();
-    public static CatapultReturnSubsystem catapultreturnSubsystem = new CatapultReturnSubsystem();
-	public static ChassisSubsystem chassisSubsystem = new ChassisSubsystem();
-    public static ClimberArmSubsystem climberarmSubsystem = new ClimberArmSubsystem();
-    public static ClimberWinchSubsystem climberwinchSubsystem = new ClimberWinchSubsystem();
+	public static BasketArmSubsystem basketarmSubsystem ;
+	public static BasketRollerSubsystem basketrollerSubsystem;
+    public static BigArmSubsystem bigarmSubsystem;
+	public static CameraSubsystem cameraSubsystem;
+    public static CatapultReturnSubsystem catapultreturnSubsystem;
+	public static ChassisSubsystem chassisSubsystem;
+    public static ClimberArmSubsystem climberarmSubsystem;
+    public static ClimberWinchSubsystem climberwinchSubsystem;
     
     private Command autonomousCommand;
 	public SendableChooser autoChooser;

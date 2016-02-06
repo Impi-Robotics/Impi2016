@@ -4553,29 +4553,154 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-02 15:56:20.810
 !MESSAGE Installedjava
-!SESSION 2016-02-03 11:18:36.025 -----------------------------------------------
+!SESSION 2016-02-03 19:26:34.540 -----------------------------------------------
 eclipse.buildId=4.5.1.M20150904-0015
-java.version=1.8.0_71
+java.version=1.8.0_66
 java.vendor=Oracle Corporation
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
 Framework arguments:  -product org.eclipse.epp.package.java.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
 
-!ENTRY org.eclipse.egit.ui 2 0 2016-02-03 11:18:52.087
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-03 19:26:45.962
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\steve deasy'. If this is
+user global configuration and to define the default location to store repositories: 'C:\Users\IBM_ADMIN'. If this is
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 
-!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-03 11:18:53.977
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-03 19:26:46.991
 !MESSAGE Installing tools if necessary
 
-!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-03 11:18:53.993
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-03 19:26:47.007
 !MESSAGE Installedtools
 
-!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-03 11:18:54.040
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-03 19:26:47.007
 !MESSAGE Installing java if necessary
 
-!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-03 11:18:54.055
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-03 19:26:47.007
+!MESSAGE Installedjava
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-03 19:38:54.905
+!MESSAGE [org.usfirst.frc.team1025.robot.commands.Autonomous [in src [in Robot2016]]
+  [Working copy] Auto_DoNothing.java
+    package org.usfirst.frc.team1025.robot.commands.Autonomous
+    import org.usfirst.frc.team1025.robot.commands.Chassis.*
+    import edu.wpi.first.wpilibj.command.CommandGroup
+    class Auto_DoNothing
+      Auto_DoNothing()]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-03 19:38:54.905
+!MESSAGE class org.eclipse.jdt.internal.core.PackageFragment
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-03 19:38:54.921
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-03 19:38:54.921
+!MESSAGE Project: P/Robot2016
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-02-03 19:39:25.747
+!MESSAGE Class: Auto_Drive_Forward Package: org.usfirst.frc.team1025.robot.commands.Autonomous
+!SESSION 2016-02-04 13:13:04.273 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-04 13:13:16.663
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\IBM_ADMIN'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-04 13:13:17.943
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-04 13:13:17.943
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-04 13:13:17.943
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-04 13:13:17.958
+!MESSAGE Installedjava
+!SESSION 2016-02-04 14:26:31.565 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-04 14:26:39.946
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\IBM_ADMIN'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-04 14:26:40.778
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-04 14:26:40.778
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-04 14:26:40.778
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-04 14:26:40.778
+!MESSAGE Installedjava
+!SESSION 2016-02-05 08:11:58.424 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-05 08:12:06.356
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\IBM_ADMIN'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-05 08:12:07.541
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-05 08:12:07.543
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-05 08:12:07.544
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-05 08:12:07.545
+!MESSAGE Installedjava
+!SESSION 2016-02-06 08:33:14.589 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-02-06 08:33:25.125
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\IBM_ADMIN'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-06 08:33:26.953
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-06 08:33:26.953
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-06 08:33:26.963
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-02-06 08:33:26.963
 !MESSAGE Installedjava

@@ -17,6 +17,7 @@ public class SetBigArmSetpoint extends Command {
         // eg. requires(chassis);
     	this.setpoint = setpoint;
     	requires(Robot.bigarmSubsystem);
+    	setInterruptible(true);
     }
 
     // Called just before this Command runs the first time
@@ -36,6 +37,7 @@ public class SetBigArmSetpoint extends Command {
     protected boolean isFinished() {
     	
      	if (Robot.bigarmSubsystem.onTarget() || Math.abs(Robot.oi.buttonsController.getRightY()) > 0.2) {
+     		
     		return true;
     	}
         return false;

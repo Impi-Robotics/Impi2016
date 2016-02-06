@@ -16,9 +16,9 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 public class ChassisSubsystem extends Subsystem {
 		
 	    private Talon frontLeftMotor;
-	    private Victor rearLeftMotor;
+	    private Talon rearLeftMotor;
 	    private Talon frontRightMotor;
-	    private Victor  rearRightMotor;
+	    private Talon  rearRightMotor;
 	    public RobotDrive robotDrive;
 		
 		private Encoder leftEncoder;
@@ -32,9 +32,9 @@ public class ChassisSubsystem extends Subsystem {
 		
 		
 		frontLeftMotor  = new Talon(RobotMap.PWM__CHASSIS__LEFT_FRONT_MOTOR);
-        rearLeftMotor   = new Victor(RobotMap.PWM__CHASSIS__LEFT_REAR_MOTOR);
+        rearLeftMotor   = new Talon(RobotMap.PWM__CHASSIS__LEFT_REAR_MOTOR);
         frontRightMotor = new Talon(RobotMap.PWM__CHASSIS__RIGHT_FRONT_MOTOR);
-        rearRightMotor  = new Victor(RobotMap.PWM__CHASSIS__RIGHT_REAR_MOTOR);
+        rearRightMotor  = new Talon(RobotMap.PWM__CHASSIS__RIGHT_REAR_MOTOR);
         
         robotDrive = new RobotDrive(frontLeftMotor,rearLeftMotor,frontRightMotor,rearRightMotor);
         
@@ -51,9 +51,9 @@ public class ChassisSubsystem extends Subsystem {
     // here. Call these from Commands.
 
     public void initDefaultCommand() {
+    	
     	setDefaultCommand(new Chassis_Joystick());
-        // Set the default command for a subsystem here.
-        //setDefaultCommand(new MySpecialCommand());
+        
     }
     
     public void updateStatus() {

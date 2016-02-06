@@ -25,15 +25,23 @@ public class Climber_Arm_Joystick extends Command {
     	
     	 XboxController buttonsController = Robot.oi.getButtonsController();
     	
-    	 if(buttonsController.getDpad() == 0)
-    			 {Robot.climberarmSubsystem.climberArmUp();}
+    	 if(buttonsController.getDpad() == 0){
+    		 
+    		 Robot.climberarmSubsystem.climberArmUp();
+    		 }
+    	 
     	 else if (buttonsController.getDpad() == 180)
-    		     {Robot.climberarmSubsystem.climberArmDown();}
+    	 
+    	 {
+    		 Robot.climberarmSubsystem.climberArmDown();
+    		 
+    	 }
        
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
+    	
         return false;
     }
 

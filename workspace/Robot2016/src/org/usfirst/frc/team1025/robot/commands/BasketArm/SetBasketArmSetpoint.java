@@ -17,6 +17,7 @@ public class SetBasketArmSetpoint extends Command {
         // eg. requires(chassis);
     	this.setpoint = setpoint;
     	requires(Robot.basketarmSubsystem);
+    	setInterruptible(true);
     }
 
     // Called just before this Command runs the first time
@@ -36,6 +37,7 @@ public class SetBasketArmSetpoint extends Command {
     protected boolean isFinished() {
     	
      	if (Robot.basketarmSubsystem.onTarget() || Math.abs(Robot.oi.buttonsController.getLeftY()) > 0.2) {
+     		
     		return true;
     	}
         return false;

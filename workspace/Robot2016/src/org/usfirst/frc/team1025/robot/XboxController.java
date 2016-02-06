@@ -51,7 +51,7 @@ public class XboxController extends Joystick {
         return getRawAxis(5);
     }
     
-    public double getDpad() {
+    public int getDpad() {
         return getPOV();
     }
     

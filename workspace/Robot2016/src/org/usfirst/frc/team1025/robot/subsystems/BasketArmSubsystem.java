@@ -17,6 +17,7 @@ public class BasketArmSubsystem extends PIDSubsystem {
 	
 	private Potentiometer basketArmPot; 
 	private SpeedController basketArmMotor;
+	
     
 	
 	
@@ -32,6 +33,7 @@ public class BasketArmSubsystem extends PIDSubsystem {
              getPIDController().setPID(kP_simulation, 0, 0, 0);
          }
          setAbsoluteTolerance(2.5);
+         getPIDController().setContinuous(false);
 
          basketArmMotor = new Victor(RobotMap.PWM__BASKET_MOTOR);
          
@@ -58,7 +60,7 @@ public class BasketArmSubsystem extends PIDSubsystem {
     
     public void updateStatus() {
     	
-    	SmartDashboard.putData("Arm Angle", (AnalogPotentiometer) basketArmPot);
+    	SmartDashboard.putData("Basket Arm Angle", (AnalogPotentiometer) basketArmPot);
     }
     
    
@@ -80,6 +82,12 @@ public class BasketArmSubsystem extends PIDSubsystem {
        basketArmMotor.set(0.);
      
 	}
+   
+   public void reset() {
+	   
+	   getPIDController().reset();
+	   
+   }
    
     
 }

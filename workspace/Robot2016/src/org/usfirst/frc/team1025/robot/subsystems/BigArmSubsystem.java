@@ -31,6 +31,7 @@ public class BigArmSubsystem extends PIDSubsystem {
              getPIDController().setPID(kP_simulation, 0, 0, 0);
          }
          setAbsoluteTolerance(2.5);
+         getPIDController().setContinuous(false);
 
          bigArmMotor = new Victor(RobotMap.PWM__BIGARM_MOTOR);
          
@@ -48,15 +49,15 @@ public class BigArmSubsystem extends PIDSubsystem {
     }
     
     public void initDefaultCommand() {
+    	
     	setDefaultCommand(new Big_Arm_Joystick());
-        // Set the default command for a subsystem here.
-        //setDefaultCommand(new MySpecialCommand());
+       
     }
     
     
     public void updateStatus() {
     	
-    	SmartDashboard.putData("Arm Angle", (AnalogPotentiometer) bigArmPot);
+    	SmartDashboard.putData("Big Arm Angle", (AnalogPotentiometer) bigArmPot);
     }
     
    
@@ -65,18 +66,27 @@ public class BigArmSubsystem extends PIDSubsystem {
         // e.g. a sensor, like a potentiometer:
         // yourPot.getAverageVoltage() / kYourMaxVoltage;
     	return bigArmPot.get();
+    	
     }
     
     protected void usePIDOutput(double output) {
         // Use output to drive your system, like a motor
         // e.g. yourMotor.set(output);
+    	
     	bigArmMotor.pidWrite(output);
     }
     
 
    public void stop() {
+	   
        bigArmMotor.set(0.);
      
 	}
+   
+   public void reset() {
+	   
+	   getPIDController().reset();
+	   
+   }
     
 }
